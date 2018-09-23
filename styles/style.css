@@ -15,7 +15,7 @@ body {
           box-sizing: border-box;
   overflow-x: hidden; }
 
-section.overlay {
+/*section.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -23,7 +23,7 @@ section.overlay {
   background: red;
   color: #fff;
   height: 50px;
-  z-index: 99999; }
+  z-index: 99999; }*/
 
 section.intro {
   -webkit-box-sizing: border-box;
@@ -34,7 +34,9 @@ section.intro {
   background: black;
   display: grid;
   grid-template: 70px 1fr 50px/ 70px 1fr 1fr 100px;
-  grid-template-areas: "logo nav nav sideMenu" " . introText introText introText" ". below below ."; }
+  grid-template-areas: "logo nav nav sideMenu"
+ " . introText introText introText"
+ ". below below ."; }
   section.intro > * {
     overflow: hidden; }
 
@@ -104,7 +106,9 @@ section.intro {
   position: relative;
   display: grid;
   grid-template: 1fr 1.5em 1fr / 1fr;
-  grid-template-areas: "heading" "hero_description" " abtBtn";
+  grid-template-areas: "heading"
+ "hero_description"
+ " abtBtn";
   grid-area: introText; }
   .introText > * {
     overflow: hidden; }
@@ -245,7 +249,16 @@ section.showCase {
   padding-bottom: 3em;
   display: grid;
   grid-template: repeat(2, 4em) 5em repeat(1, 14em) 7em repeat(1, 14em) 7em repeat(1, 14em) 7em repeat(1, 14em)/15px 1fr 1fr 15px;
-  grid-template-areas: ". showCaseHeading showCaseHeading ." ". showCaseHeading showCaseHeading ." ". . . ." ". showCaseFirst showCaseFirst ." ". . . ." ". showCaseSecond showCaseSecond ." ". . . ." ". showCaseThird showCaseThird ." ". . . ." ". showCaseFourth showCaseFourth ."; }
+  grid-template-areas: ". showCaseHeading showCaseHeading ."
+ ". showCaseHeading showCaseHeading ."
+ ". . . ."
+ ". showCaseFirst showCaseFirst ."
+ ". . . ."
+ ". showCaseSecond showCaseSecond ."
+ ". . . ."
+ ". showCaseThird showCaseThird ."
+ ". . . ."
+ ". showCaseFourth showCaseFourth ."; }
   section.showCase:before {
     position: absolute;
     content: " ";
@@ -304,7 +317,8 @@ section.showCase {
   grid-template: 60px 1fr/ 1fr;
   -webkit-box-shadow: 0px 0px 40px 1px #eee;
           box-shadow: 0px 0px 40px 1px #eee;
-  grid-template-areas: 'showCaseTitle' ' iframe'; }
+  grid-template-areas: 'showCaseTitle'
+ ' iframe'; }
   .showCommon .showCaseTitle {
     grid-area: showCaseTitle;
     background: #000000;
@@ -393,7 +407,8 @@ section.canvasExperiments {
   width: 100%;
   position: relative;
   grid-template: repeat(2, 4em)/15px 1fr 1fr 15px;
-  grid-template-areas: '. canvasExperimentsHeading canvasExperimentsHeading .' '. canvasExperimentsHeading canvasExperimentsHeading .'; }
+  grid-template-areas: '. canvasExperimentsHeading canvasExperimentsHeading .'
+ '. canvasExperimentsHeading canvasExperimentsHeading .'; }
   section.canvasExperiments:before {
     position: absolute;
     content: " ";
@@ -435,7 +450,8 @@ footer.footer {
   padding-bottom: 3em;
   display: grid;
   grid-template: repeat(2, 5em)/15px 1fr 1fr 15px;
-  grid-template-areas: '. footerLogo footerLogo .' 'footerLink footerLink footerLink footerLink'; }
+  grid-template-areas: '. footerLogo footerLogo .'
+ 'footerLink footerLink footerLink footerLink'; }
   footer.footer p
 .logo {
     position: relative;
