@@ -15,15 +15,165 @@ body {
           box-sizing: border-box;
   overflow-x: hidden; }
 
-/*section.overlay {
+nav.sideMenuNav {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0%;
   width: 100vw;
   background: red;
-  color: #fff;
-  height: 50px;
-  z-index: 99999; }*/
+  z-index: 9999;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  display: grid; }
+
+section.overlay {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  right: -130%;
+  width: 100vw;
+  background: whitesmoke;
+  z-index: 99999;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  display: grid;
+  grid-template: 1.5fr 2fr / 10px 1fr 10px;
+  grid-template-areas: '. about_heading .' '. about_skills .'; }
+  section.overlay .closeMenuBtn {
+    background: whitesmoke;
+    position: absolute;
+    border: none;
+    right: 2em;
+    top: 2em;
+    height: 45px;
+    width: 50px;
+    z-index: 999;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in; }
+    section.overlay .closeMenuBtn:hover {
+      background: #ddd;
+      -webkit-transition: all .3s ease-in;
+      -o-transition: all .3s ease-in;
+      transition: all .3s ease-in; }
+    section.overlay .closeMenuBtn:hover:after, section.overlay .closeMenuBtn:hover:before {
+      height: 7px; }
+    section.overlay .closeMenuBtn:active, section.overlay .closeMenuBtn:focus {
+      outline: none; }
+    section.overlay .closeMenuBtn:before, section.overlay .closeMenuBtn:after {
+      position: absolute;
+      content: " ";
+      top: 45%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      width: 100%;
+      height: 5px;
+      background: #000;
+      border-radius: 6px; }
+    section.overlay .closeMenuBtn:before {
+      left: 0;
+      -webkit-transform: rotate(-50deg);
+          -ms-transform: rotate(-50deg);
+              transform: rotate(-50deg);
+      -webkit-transform-origin: center center;
+          -ms-transform-origin: center center;
+              transform-origin: center center; }
+    section.overlay .closeMenuBtn:after {
+      right: 0;
+      -webkit-transform: rotate(50deg);
+          -ms-transform: rotate(50deg);
+              transform: rotate(50deg);
+      -webkit-transform-origin: center center;
+          -ms-transform-origin: center center;
+              transform-origin: center center; }
+  section.overlay .about_heading_con {
+    position: relative;
+    grid-area: about_heading; }
+    section.overlay .about_heading_con .about_heading {
+      padding: 0px 20px;
+      padding-top: 60px;
+      height: 100%;
+      width: 100%;
+      font-size: 20px;
+      color: #1c1d25;
+      font-family: 'Source Sans Pro', sans-serif; }
+      section.overlay .about_heading_con .about_heading h3 {
+        position: relative;
+        font-size: 30px;
+        margin: 0;
+        padding: 0; }
+      section.overlay .about_heading_con .about_heading p {
+        font-family: 'Source Sans Pro', sans-serif;
+        padding: 0; }
+      section.overlay .about_heading_con .about_heading p.first {
+        margin-top: -3px;
+        font-size: 20px; }
+      section.overlay .about_heading_con .about_heading p.second {
+        margin-top: 12px; }
+      section.overlay .about_heading_con .about_heading p.third {
+        margin-top: 5px; }
+      section.overlay .about_heading_con .about_heading p.fourth {
+        margin-top: 5px; }
+  section.overlay .about_skills_con {
+    grid-area: about_skills;
+    position: relative; }
+    section.overlay .about_skills_con .aboutSkill {
+      position: relative;
+      display: grid;
+      grid-template: 55px 1fr/ 1fr;
+      grid-template-areas: 'myskills_heading' 'iconsCon';
+      width: 100%;
+      height: 100%;
+      padding: 0px 20px;
+      font-family: 'Source Sans Pro', sans-serif; }
+      section.overlay .about_skills_con .aboutSkill h3 {
+        position: relative;
+        grid-area: myskills_heading;
+        font-size: 30px;
+        margin: 0;
+        padding-top: 30px;
+        text-align: left; }
+      section.overlay .about_skills_con .aboutSkill .iconsCon {
+        position: relative;
+        margin-top: 30px;
+        position: relative;
+        grid-area: iconsCon;
+        display: grid;
+        grid-column-gap: 10px;
+        grid-template: 80px/repeat(4, 1fr); }
+        section.overlay .about_skills_con .aboutSkill .iconsCon .icon {
+          position: relative; }
+          section.overlay .about_skills_con .aboutSkill .iconsCon .icon svg {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0; }
+          section.overlay .about_skills_con .aboutSkill .iconsCon .icon:before {
+            position: absolute;
+            content: attr(data);
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
+            bottom: -2.5em;
+            padding: 1em 2em;
+            font-size: .8em;
+            font-weight: 600;
+            font-family: 'Source Sans Pro', sans-serif; }
+        section.overlay .about_skills_con .aboutSkill .iconsCon #react:hover {
+          color: #00d8ff; }
+        section.overlay .about_skills_con .aboutSkill .iconsCon #js:hover {
+          color: #f7df1e; }
+        section.overlay .about_skills_con .aboutSkill .iconsCon #css:hover {
+          color: #002561; }
+        section.overlay .about_skills_con .aboutSkill .iconsCon #html:hover {
+          color: #e34f26; }
 
 section.intro {
   -webkit-box-sizing: border-box;
@@ -34,9 +184,7 @@ section.intro {
   background: black;
   display: grid;
   grid-template: 70px 1fr 50px/ 70px 1fr 1fr 100px;
-  grid-template-areas: "logo nav nav sideMenu"
- " . introText introText introText"
- ". below below ."; }
+  grid-template-areas: "logo nav nav sideMenu" " . introText introText introText" ". below below ."; }
   section.intro > * {
     overflow: hidden; }
 
@@ -57,6 +205,8 @@ section.intro {
   justify-self: end;
   background: #000;
   text-align: center; }
+  .sideMenu:focus, .sideMenu:active {
+    outline: none; }
   .sideMenu span {
     top: 50%;
     left: 50%;
@@ -106,9 +256,7 @@ section.intro {
   position: relative;
   display: grid;
   grid-template: 1fr 1.5em 1fr / 1fr;
-  grid-template-areas: "heading"
- "hero_description"
- " abtBtn";
+  grid-template-areas: "heading" "hero_description" " abtBtn";
   grid-area: introText; }
   .introText > * {
     overflow: hidden; }
@@ -249,16 +397,7 @@ section.showCase {
   padding-bottom: 3em;
   display: grid;
   grid-template: repeat(2, 4em) 5em repeat(1, 14em) 7em repeat(1, 14em) 7em repeat(1, 14em) 7em repeat(1, 14em)/15px 1fr 1fr 15px;
-  grid-template-areas: ". showCaseHeading showCaseHeading ."
- ". showCaseHeading showCaseHeading ."
- ". . . ."
- ". showCaseFirst showCaseFirst ."
- ". . . ."
- ". showCaseSecond showCaseSecond ."
- ". . . ."
- ". showCaseThird showCaseThird ."
- ". . . ."
- ". showCaseFourth showCaseFourth ."; }
+  grid-template-areas: ". showCaseHeading showCaseHeading ." ". showCaseHeading showCaseHeading ." ". . . ." ". showCaseFirst showCaseFirst ." ". . . ." ". showCaseSecond showCaseSecond ." ". . . ." ". showCaseThird showCaseThird ." ". . . ." ". showCaseFourth showCaseFourth ."; }
   section.showCase:before {
     position: absolute;
     content: " ";
@@ -317,8 +456,7 @@ section.showCase {
   grid-template: 60px 1fr/ 1fr;
   -webkit-box-shadow: 0px 0px 40px 1px #eee;
           box-shadow: 0px 0px 40px 1px #eee;
-  grid-template-areas: 'showCaseTitle'
- ' iframe'; }
+  grid-template-areas: 'showCaseTitle' ' iframe'; }
   .showCommon .showCaseTitle {
     grid-area: showCaseTitle;
     background: #000000;
@@ -334,15 +472,28 @@ section.showCase {
   .showCommon .showCaseContainer {
     z-index: 999;
     position: relative;
-    grid-area: iframe; }
+    grid-area: iframe;
+    overflow: hidden; }
     .showCommon .showCaseContainer:before {
       position: absolute;
       content: " ";
       top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.4); }
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.4);
+      -webkit-animation: caseContainerBefore .2s ease-in-out forwards;
+              animation: caseContainerBefore .2s ease-in-out forwards; }
+    .showCommon .showCaseContainer:after {
+      position: absolute;
+      content: " ";
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      -webkit-animation: caseContainerAfter .8s ease-in-out forwards;
+              animation: caseContainerAfter .8s ease-in-out forwards;
+      z-index: 9; }
     .showCommon .showCaseContainer a {
       display: block;
       position: absolute;
@@ -407,8 +558,7 @@ section.canvasExperiments {
   width: 100%;
   position: relative;
   grid-template: repeat(2, 4em)/15px 1fr 1fr 15px;
-  grid-template-areas: '. canvasExperimentsHeading canvasExperimentsHeading .'
- '. canvasExperimentsHeading canvasExperimentsHeading .'; }
+  grid-template-areas: '. canvasExperimentsHeading canvasExperimentsHeading .' '. canvasExperimentsHeading canvasExperimentsHeading .'; }
   section.canvasExperiments:before {
     position: absolute;
     content: " ";
@@ -450,8 +600,7 @@ footer.footer {
   padding-bottom: 3em;
   display: grid;
   grid-template: repeat(2, 5em)/15px 1fr 1fr 15px;
-  grid-template-areas: '. footerLogo footerLogo .'
- 'footerLink footerLink footerLink footerLink'; }
+  grid-template-areas: '. footerLogo footerLogo .' 'footerLink footerLink footerLink footerLink'; }
   footer.footer p
 .logo {
     position: relative;
@@ -494,6 +643,33 @@ footer.footer {
         padding: 3em .5em;
         line-height: 2.3; }
 
+.btnSideMenu {
+  opacity: 0; }
+
+@-webkit-keyframes caseContainerBefore {
+  0% {
+    left: -100%; }
+  100% {
+    left: 0; } }
+
+@keyframes caseContainerBefore {
+  0% {
+    left: -100%; }
+  100% {
+    left: 0; } }
+
+@-webkit-keyframes caseContainerAfter {
+  0% {
+    left: -100%; }
+  100% {
+    left: 200%; } }
+
+@keyframes caseContainerAfter {
+  0% {
+    left: -100%; }
+  100% {
+    left: 200%; } }
+
 @-webkit-keyframes belowLine {
   0% {
     top: -150%; }
@@ -510,7 +686,34 @@ footer.footer {
 
 @media only screen and (min-width: 500px) {
   section.showCase {
-    grid-template: repeat(2, 4em) 5em repeat(1, 16em) 7em repeat(1, 16em) 7em repeat(1, 16em) 7em repeat(1, 16em)/15px 1fr 1fr 15px; } }
+    grid-template: repeat(2, 4em) 5em repeat(1, 16em) 7em repeat(1, 16em) 7em repeat(1, 16em) 7em repeat(1, 16em)/15px 1fr 1fr 15px; }
+  section.overlay {
+    grid-template: 1.5fr 2fr / 40px 1fr 40px; }
+    section.overlay .closeMenuBtn {
+      right: 3em;
+      top: 3em;
+      height: 50px;
+      width: 55px; }
+    section.overlay .about_heading_con .about_heading {
+      padding: 0px 25px;
+      padding-top: 120px;
+      font-size: 22px; }
+    section.overlay .about_skills_con {
+      grid-area: about_skills;
+      position: relative; }
+      section.overlay .about_skills_con .aboutSkill {
+        padding: 0px 25px; }
+        section.overlay .about_skills_con .aboutSkill h3 {
+          padding-top: 30px;
+          text-align: left; }
+        section.overlay .about_skills_con .aboutSkill .iconsCon {
+          margin-top: 35px;
+          grid-column-gap: 5px;
+          grid-template: 90px/repeat(4, 1fr); }
+          section.overlay .about_skills_con .aboutSkill .iconsCon .icon:before {
+            bottom: -2.9em;
+            font-weight: 700;
+            font-family: 'Source Sans Pro', sans-serif; } }
 
 @media only screen and (min-width: 600px) {
   section.showCase {
@@ -534,7 +737,23 @@ footer.footer {
       .showCommon .showCaseContainer a:after {
         width: 108%;
         height: 128%;
-        border: .18em solid #000; } }
+        border: .18em solid #000; }
+  section.overlay {
+    grid-template: 1.5fr 2fr / 1fr 700px 1fr; }
+    section.overlay .closeMenuBtn {
+      top: 5em;
+      right: 5em;
+      height: 55px;
+      width: 60px; }
+    section.overlay .about_heading_con .about_heading {
+      padding-top: 130px;
+      font-size: 22px; }
+    section.overlay .about_skills_con .aboutSkill .iconsCon {
+      margin-top: 35px;
+      grid-column-gap: 10px;
+      grid-template: 90px/repeat(4, 1fr); }
+      section.overlay .about_skills_con .aboutSkill .iconsCon .icon:before {
+        font-weight: 700; } }
 
 @media only screen and (min-width: 900px) {
   body {
