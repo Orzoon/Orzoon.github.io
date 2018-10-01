@@ -1,12 +1,15 @@
 // variables
 window.addEventListener("load", () => {
     //-------------------------------------------------->
-    // First Section Variables
+    // All the Buttons
     let btnSideMenu = document.querySelector('.sideMenu');
     let btnAbtMe = document.querySelector('.abt_me');
-    let btnCloseMenu = document.querySelector('.closeMenuBtn')
-    // functions 
+    let btnCloseMenu = document.querySelector('.closeMenuBtn');
+    let btncloseSideMenuBtn = document.querySelector('.closeSideMenuBtn');
 
+    // getting all the links
+    let sideLink = document.querySelectorAll('.slideLink')
+    // functions
     let slideInNav = () => {
         // sideMenuNav variables
         let sideMenuNav = document.querySelector('.sideMenuNav');
@@ -27,10 +30,32 @@ window.addEventListener("load", () => {
         //removing the btnSideMenu
         btnSideMenu.classList.add('btnSideMenu');
     }
+    let closeSideMenu = () => {
+        let sideMenuNav = document.querySelector('.sideMenuNav');
+        // to orignal place
+        sideMenuNav.style.right = "-150%";
+
+         // displaying the button
+         btnSideMenu.classList.remove('btnSideMenu');
+    }
+
+    let sideLinkClicked = (i) => {
+        if( i != 0){
+            closeSideMenu();
+        }
+        else {
+            closeSideMenu();
+            setTimeout(slideIn,130);
+        }
+    }
     // MenuBtn
     btnSideMenu.addEventListener('click', slideInNav);
     btnAbtMe.addEventListener('click', slideIn);
 
+    //Event listener for sideLink
+    for( i = 0; i < sideLink.length; i++){
+        sideLink[i].addEventListener('click', sideLinkClicked.bind(this, i))
+    }
     // closing the overlay 
     btnCloseMenu.addEventListener('click', () => {
         let overLayCon = document.querySelector('.overlay');
@@ -41,11 +66,8 @@ window.addEventListener("load", () => {
         btnSideMenu.classList.remove('btnSideMenu');
 
     })
-
-    window.addEventListener('scroll', (e) => {
-        let scrolled = window.pageYOffset;
-        
-    })
+    // closing the sideNavMenu 
+    btncloseSideMenuBtn.addEventListener('click', closeSideMenu)
 })
 
 //styling the overlay 
