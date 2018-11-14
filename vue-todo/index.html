@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue Todo App--FrotEnd</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h3>Todo List App Using <strong>Vue.JS</strong></h3>
+    <div class="img-container">
+      <img src="vueImage.jpg" alt="Vue-Logo">
+      <p id="adrem-Message" v-bind:class="{'alert alert-success': isAdded,'alert alert-danger': isRemoved}"><strong>{{message}}</strong></p>
+    </div>
+    <form id="form" v-on:submit.prevent = "addItem">
+     <div class="form-group">
+       <input type="text" class="form-control" placeholder = "Task eg, wake up at 4am" v-model= "newItem">
+     </div>
+     <button class="btn btn-primary" type="submit">Add To List</button>
+    </form>
+    <h3>Tasks to be done: Front-End</h3>
+    <table class="table table-striped" table-border="3px">
+      <tr v-for="list in lists">
+        <td id="td-id">
+          <label>
+            <input type="checkbox" id="inp-checkbox" v-model="list.strike">
+         </label>
+        </td>
+        <td><span v-bind:class="{striked : list.strike}">{{ list.item }}</span></td>
+        <td id="td-btn"><button class="btn btn-primary" v-on:click="removeItem(list)">Remove</button></td>
+      </tr>
+    </table>
+  </div>
+</body>
+<script src="vue.js"></script>
+<!--Vue-app-script-->
+<script src="app.js"></script>
+</html>

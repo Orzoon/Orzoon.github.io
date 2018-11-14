@@ -1,0 +1,68 @@
+body{
+  padding-top:20px;
+}
+.img-container{
+  position: relative;
+  width:200px;
+  margin:0 auto;
+}
+img{
+  width:100%;
+}
+#form{
+  height: auto;
+  width: 400px;
+  margin: 40px auto 30px auto;
+  text-align: center;
+}
+#form input{
+  outline:none;
+  width: 300px;
+}
+.table{
+  width:500px;
+  margin:0 auto;
+}
+h3{
+  text-align: center;
+  width:500px;
+  margin: 10px auto 0px auto;
+  border-bottom:2px solid #337ab7;
+  padding-bottom:5px;
+}
+.table>tbody>tr>td{
+  font-size:15px;
+  vertical-align: middle;
+  border: 0px;
+}
+.form-control{
+  float:left;
+}
+#td-btn{
+  float:right;
+  margin-right:20px;
+}
+#td-id{
+  float:left;
+  margin-left:20px;
+}
+#adrem-Message{
+  position:absolute;
+  top:180px;
+  left:50%;
+  transform: translateX(-50%);
+  display:block;
+  width: 400px;
+  font-size: 16px;
+}
+input[type="checkbox"]{
+  margin:0px;
+  padding:0px;
+  width:20px;
+  height:20px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.striked{
+  text-decoration:line-through;
+}
