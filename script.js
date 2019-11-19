@@ -1,5 +1,6 @@
 // variables
 window.addEventListener("load", () => {
+    window.location.replace("https://orzoon-portfolio.herokuapp.com/")
     let preloader = document.querySelector('.loader');
     let bodyContainer = document.querySelector('.bodyContainer');
     let canvas = document.querySelector('#particles-js');
