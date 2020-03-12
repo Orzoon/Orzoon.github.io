@@ -308,7 +308,7 @@ section.details {
     text-align: left;
     padding-left: 50px;
     line-height: 3.6;
-    background: url("../assets/uploadimage.png") center center no-repeat; }
+    background: url("./assets/uploadImage.png") center center no-repeat; }
   .inputFileLabel:before {
     position: absolute;
     content: "Upload your bill here";
