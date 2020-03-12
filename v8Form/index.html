@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link type = "text/css" rel ="stylesheet" href = "index.css">
+    <body>
+        <div class="imageContainer">
+            <header class = "header">
+                <div class="logo">
+                    <img src= "assets/eumpire.png" alt="Logo">
+                    <p class = "title">Gas and Electricity Comparision </p>
+                </div>
+                <div class="contactDetails">
+                    <a href="#"> contact@energyumpire.com.au</a>
+                    <p>Opening hours</p>
+                </div>
+            </header>
+
+            <section class = "section1">
+                <h3 class = "sectionTitle">Your Usuage</h3>
+                <p class = "sectionPara">To find you some great plans we need to collect some deatils about you</p>
+                <form id = "comparison_form" name ="comparison_form">
+                    <!-- FIRST QUESTION -->
+                    <div class = "question">
+                        <p>What are you looking to compare? <span class = "compulsary"></span></p>
+                        <input 
+                            class = "form_input" 
+                            id = "q1_i1" type="radio" 
+                            name = "energy_category" 
+                            value = "Electricity & Gas" 
+                         />
+                        <label for="q1_i1">Electricity & Gas</label>
+
+                        <input 
+                            class = "form_input" 
+                            id = "q1_i2" 
+                            type="radio" 
+                            name = "energy_category" 
+                            value = "Electricity"
+                        />
+                        <label for="q1_i2">Electricity</label>
+                       
+                        <input 
+                            class = "form_input" 
+                            id = "q1_i3" 
+                            type="radio" 
+                            name = "energy_category" 
+                            value = "Gas"
+                         />
+                        <label for="q1_i3">Gas</label>
+                    </div>
+            
+                    <!-- SECOND QUESTION -->
+                    <div class = "question">
+                        <p>Is your energy for your Home or Business<span class = "compulsary"></span></p>
+                        <input 
+                            class = "form_input" 
+                            id = "q2_i1" type="radio" 
+                            name = "property_type" 
+                            value = "MyHome" 
+                        />
+                        <label for="q2_i1">Home</label>
+                     
+                        <input 
+                            class = "form_input" 
+                            id = "q2_i2" 
+                            type="radio" 
+                            name = "property_type" 
+                            value = "MyBusiness"
+                        />               
+                        <label for="q2_i2">Business</label>
+
+                    </div>
+
+                     <!-- THIRD QUESTION -->
+                    <div class = "question">
+                        <p>Enter your postcode<span class = "compulsary"></span></p>
+                        <div class="inputWrapper">
+                            <input 
+                            class = "input_form_date" 
+                            id = "postcode" 
+                            type="text" 
+                            name = "postcode"  
+                            />
+                        </div>
+                    </div>
+                    
+                    <!-- Fourth QUESTION -->
+                    <!-- <div class = "question">
+                        <p>dow you own or rent the property<span class = "compulsary"></span></p>
+                        <input 
+                            class = "form_input" 
+                            id = "q3_i1" type="radio" 
+                            name = "own_rent" 
+                            value = "own" 
+                        />
+                        <label for="q3_i1">Yes</label>
+                       
+                        <input 
+                            class = "form_input" 
+                            id = "q3_i2" 
+                            type="radio" 
+                            name = "own_rent" 
+                            value = "rent"
+                        />
+                        <label for="q3_i2">No</label>
+                    </div> -->
+            
+                    <!-- FITFTH QUESTION -->
+                    <div class = "question moving_question">
+                        <p>Are you moving<span class = "compulsary"></span></p>
+                        <input 
+                            class = "form_input" 
+                            id = "none" type="radio" 
+                            name = "moving" 
+                            value = "yes" 
+                        />
+                        <label for="none">Yes</label>
+                     
+                        <input 
+                            class = "form_input" 
+                            id = "none2" 
+                            type="radio" 
+                            name = "moving" 
+                            value = "no"
+                        />               
+                        <label for="none2">No</label>
+
+                    </div>
+
+                    <!-- SIXTH QUESTION -->
+                    <div class = "question moving_yes home">
+                        <p>What is the number of people in your home?<span class = "compulsary"></span></p>
+                        <div class="inputWrapper">
+                            <select class = "input_form_select" name="noOfPeople" id="noOfPeople" aria-placeholder="select no of people">
+                                <option value=" "> select no of people</option>
+                                <option value = '1'> 1</option>
+                                <option value = '2'> 2</option>
+                                <option value = '3'> 3</option>
+                                <option value = '4'> 4</option>
+                                <option value = '5'> 5</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- SEVENTH QUESTION -->
+                    <div class = "question moving_yes business">
+                        <p>What is the size of your business?<span class = "compulsary"></span></p>
+                        <div class="inputWrapper">
+                            <select class = "input_form_select" name="noOfPeople" id="businessNumber" aria-placeholder="select size of your business">
+                                <option value=" "> select the size of your business</option>
+                                <option value = 'small'> small</option>
+                                <option value = 'medium'> medium</option>
+                                <option value = 'large'> large</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <!-- EIGHTH QUESTION -->
+                    <div class = "question moving_yes">
+                        <p>What date are you moving in ?<span class = "compulsary"></span></p>
+                        <div class="inputWrapper">
+                            <input 
+                                class = "input_form_date" 
+                                id = "date" 
+                                type="date" 
+                                name = "date"  
+                                />
+                        </div>
+                    </div>
+
+                    <!-- NINETH QUESTION -->
+                    <div class = "question moving_yes">
+                        <p>What is your new address ?<span class = "compulsary"></span></p>
+                        <div class="inputWrapper">
+                            <input 
+                                class = "input_form_address" 
+                                id = "address" 
+                                type="text" 
+                                name = "address" 
+                                />
+                        </div>
+                    </div>
+
+                    <!-- TENTH QUESTION -->
+                    <div class = "question moving_yes">
+                        <p>Your Email Address ? <span class = "compulsary"></span></p>
+                        <div class="inputWrapper">
+                            <input 
+                                class = "input_form_email" 
+                                id = "email" 
+                                type="email" 
+                                name = "email" 
+                                />
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <section class="energyDetails">
+            <div class = "subEnergyDetails">
+                <h3 class = "energyDetailsHeading"></h3>
+                <p class = "upload">upload a recent e-bill</p>
+                <p class = "whyUpload">why apload an e-bill?</p>
+                <ul>
+                    <li>Provides a more accurate estimate</li>
+                    <li>We use a service provider to assist with pre-filling your usage information </li>
+                </ul>
+                <p class="checkboxFile">
+                    <input type="checkbox"> I and anyone else named on this bill have read and understood iSelect's terms and conditions and privacy collection notice with respect to the collection, use and disclosure of my personal information.</p>
+               
+               
+                 <form id ="file" action="">
+                     <label class = "inputFileLabel">
+                        <input type="file" name = "billPdf" id = "inputFile">
+                     </label>
+                </form>
+                <button class = "detailsButtonFirst detailsButton">Enter your bill info here <span class = "toolTip" data = "compare manually by yourself">!</span></button>
+                <button class = "noDetails">Or: i have not got a recent bill<span class = "toolTip" data = "Without your bill we calculate typical savings only. you still get the cheapest price">!</span></button>
+            </div>
+
+            <form class = "billInfoForm" id = "billInfoForm1">
+                <div class = "question supplyPeriod">
+                    <p>Supply Period<span class = "compulsary"></span></p>
+                    <div class="inputWrapper dateWrapper">
+                        <input type = "date" class = "input_form_email date firstDateInput"/> To <input type = "date" class = "input_form_email date secondDateInput"/>
+                    </div>
+                </div>
+                <div class = "question provider">
+                    <p>Current Energy Provider<span class = "compulsary"></span></p>
+                    <div class="inputWrapper">
+                        <select class = "input_form_select" name="noOfPeople" aria-placeholder="select no of people">
+                            <option value=" "> select current energy provider</option>
+                            <option value = '1'> 1</option>
+                            <option value = '2'> 2</option>
+                            <option value = '3'> 3</option>
+                            <option value = '4'> 4</option>
+                            <option value = '5'> 5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class = "question billAmount">
+                    <p>How much is your bill<span class = "compulsary"></span></p>
+                    <div class="inputWrapper">
+                        <input 
+                            class = "input_form_email" 
+                            type="email" 
+                            name = "email" 
+                            placeholder="$50"
+                            />
+                    </div>
+                </div>
+                <div class = "question billDiscount">
+                    <p>Discount <span class = "compulsary"></span></p>
+                    <div class="inputWrapper discountAmountDIV">
+                        <input 
+                            class = "input_form_email" 
+                            type="email" 
+                            name = "discountAmount" 
+                            placeholder="Amount $4.5"
+                            />
+                        <input 
+                            class = "input_form_email" 
+                            type="email" 
+                            name = "discountPercent" 
+                            placeholder="percentage 5%"
+                        />
+                    </div>
+                </div>
+                <div class ="question elecChargedQues">
+                    <p class = "chargedFor">How are you charged for Electricity<span class = "compulsary"></span></p>
+                    <ul>
+                        <li>
+                            <label class ="ElecQuesLabel" for = "elecChargedQ1">
+                                <input type = "radio" name = "elecCharged" value = "singleRate" id = "elecChargedQ1">
+                            </label>                          
+                            <h3>Single rate</h3>
+                            <p>One rate at all times</p>
+                            <div class = "elecChargedInputsDiv">
+                                <h3>Enter Your usuage</h3>
+                                <div class = "elecChargedInputs">
+                                    <input type = "text" class = "input_form_email" placeholder = "usuage in kWh">
+                                    <input type = "text" class = "input_form_email" placeholder = "Amount">
+                                    <input type = "text" class = "input_form_email" placeholder = "daily usage">
+                                    <input type = "text" class = "input_form_email" placeholder = "Amount">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label class ="ElecQuesLabel" for = "elecChargedQ2">
+                                <input type = "radio" name = "elecCharged" value = "singleRateControlled" id = "elecChargedQ2">
+                            </label>  
+                            <h3>Single Rate Controlled Load</h3>
+                            <p>Charged one rate for standard consumption and a different rate for a separately metered appliance that only works at specific times such as night hot water</p>
+                            <div class = "elecChargedInputsDiv">
+                                <h3>Enter Your usuage</h3>
+                                <div class = "elecChargedInputs">
+                                    <input type = "text" class = "input_form_email" placeholder = "General usage kWh">
+                                    <input type = "text" class = "input_form_email" placeholder = "Amount">
+                                    <input type = "text" class = "input_form_email" placeholder = "Controlled load kWh">
+                                    <input type = "text" class = "input_form_email" placeholder = "Amount">
+                                    <input type = "text" class = "input_form_email" placeholder = "daily usage">
+                                    <input type = "text" class = "input_form_email" placeholder = "Amount">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label class ="ElecQuesLabel" for = "elecChargedQ3">
+                                <input type = "radio" name = "elecCharged" value = "timeOfUse" id = "elecChargedQ3">
+                            </label>                            
+                            <h3>Time of use</h3>
+                            <p>Different rates for electricity used at different times of the day</p>
+                            <div class = "elecChargedInputsDiv">
+                                <h3>Enter Your usuage</h3>
+                                <div class = "elecChargedInputs">
+                                    <input type = "text" class = "input_form_email" placeholder = "Peak kWh">
+                                    <input type = "text" class = "input_form_email" placeholder = "Amount">
+                                    <input type = "text" class = "input_form_email" placeholder = "Off-peak kWh">
+                                    <input type = "text" class = "input_form_email" placeholder = "Amount">
+                                    <input type = "text" class = "input_form_email" placeholder = "shoulder(optional) kWh">
+                                    <input type = "text" class = "input_form_email" placeholder = "Amount">
+                                    <input type = "text" class = "input_form_email" placeholder = "daily usage">
+                                    <input type = "text" class = "input_form_email" placeholder = "Amount">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class ="question gasChargedQues">
+                    <p class = "chargedFor">What is the ususage amount on your bill<span class = "compulsary"></span></p>
+                    <div class="inputWrapper dateWrapper">
+                        <input type = "text" class = "input_form_email date firstDateInput" placeholder = "General Usage MJ"/> <input type = "text" class = "input_form_email date secondDateInput" placeholder = "(opt) off-peal MJ" />
+                    </div>
+                </div>
+            </form>
+
+            <div class = "EandGasDetails">
+                <h3>Your Gas Details</h3>
+                <p class = "upload">upload a recent e-bill</p>
+                <p class="checkboxFile">
+                    <input type="checkbox"> I and anyone else named on this bill have read and understood iSelect's terms and conditions and privacy collection notice with respect to the collection, use and disclosure of my personal information.
+                </p>
+                 <form id ="files" action="">
+                     <label class = "inputFileLabel">
+                        <input type="file" name = "billPdf" id = "inputFiles">
+                     </label>
+                </form>
+                <button class = "detailsButtonFirst detailsButton">Enter your bill info here <span class = "toolTip" data = "compare manually by yourself">!</span></button>
+                <button class = "noDetails">Or: i have not got a recent bill<span class = "toolTip" data = "Without your bill we calculate typical savings only. you still get the cheapest price">!</span></button>
+            </div>
+            <form class ="additionalForm" id = "EandGasForm"> 
+                <div class = "question moving_yess home">
+                    <p>What is the number of people in your home?<span class = "compulsary"></span></p>
+                    <div class="inputWrapper">
+                        <select class = "input_form_select" name="noOfPeople" aria-placeholder="select no of people">
+                            <option value=" "> select no of people</option>
+                            <option value = '1'> 1</option>
+                            <option value = '2'> 2</option>
+                            <option value = '3'> 3</option>
+                            <option value = '4'> 4</option>
+                            <option value = '5'> 5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- SEVENTH QUESTION -->
+                <div class = "question moving_yess business">
+                    <p>What is the size of your business?<span class = "compulsary"></span></p>
+                    <div class="inputWrapper">
+                        <select class = "input_form_select" name="noOfPeople" aria-placeholder="select size of your business">
+                            <option value=" "> select the size of your business</option>
+                            <option value = 'small'> small</option>
+                            <option value = 'medium'> medium</option>
+                            <option value = 'large'> large</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- TENTH QUESTION -->
+                <div class = "question moving_yess">
+                    <p>Your Email Address ? <span class = "compulsary"></span></p>
+                    <div class="inputWrapper">
+                        <input 
+                            class = "input_form_email" 
+                            type="email" 
+                            name = "email" 
+                            />
+                    </div>
+                </div>
+            </form>
+            <form class = "billInfoForm" id = "billInfoForm2">
+                <div class = "question supplyPeriod">
+                    <p>Supply Period<span class = "compulsary"></span></p>
+                    <div class="inputWrapper dateWrapper">
+                        <input type = "date" class = "input_form_email date firstDateInput"/> To <input type = "date" class = "input_form_email date secondDateInput"/>
+                    </div>
+                </div>
+                <div class = "question provider">
+                    <p>Current Energy Provider<span class = "compulsary"></span></p>
+                    <div class="inputWrapper">
+                        <select class = "input_form_select" name="noOfPeople" aria-placeholder="select no of people">
+                            <option value=" "> select current energy provider</option>
+                            <option value = '1'> 1</option>
+                            <option value = '2'> 2</option>
+                            <option value = '3'> 3</option>
+                            <option value = '4'> 4</option>
+                            <option value = '5'> 5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class = "question billAmount">
+                    <p>How much is your bill<span class = "compulsary"></span></p>
+                    <div class="inputWrapper">
+                        <input 
+                            class = "input_form_email" 
+                            type="email" 
+                            name = "email" 
+                            placeholder="$50"
+                            />
+                    </div>
+                </div>
+                <div class = "question billDiscount">
+                    <p>Discount <span class = "compulsary"></span></p>
+                    <div class="inputWrapper discountAmountDIV">
+                        <input 
+                            class = "input_form_email" 
+                            type="email" 
+                            name = "discountAmount" 
+                            placeholder="Amount $4.5"
+                            />
+                        <input 
+                            class = "input_form_email" 
+                            type="email" 
+                            name = "discountPercent" 
+                            placeholder="percentage 5%"
+                        />
+                    </div>
+                </div>
+                <div class ="question gasChargedQues">
+                    <p class = "chargedFor">What is the ususage amount on your bill<span class = "compulsary"></span></p>
+                    <div class="inputWrapper dateWrapper">
+                        <input type = "text" class = "input_form_email date firstDateInput" placeholder = "General Usage MJ"/> <input type = "text" class = "input_form_email date secondDateInput" placeholder = "(opt) off-peal MJ" />
+                    </div>
+                </div>
+            </form>
+
+        </section>
+
+        <footer>
+            
+        </footer>
+    
+    </body>
+    <script src= "index.js"></script>
+</html>
