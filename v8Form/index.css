@@ -1,0 +1,739 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap");
+.containerTransition {
+  -webkit-transition: all 5s ease-in-out;
+  -o-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out; }
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto";
+  font-size: 16px; }
+
+body {
+  position: relative;
+  background: #F7F7F7;
+  overflow-x: hidden; }
+
+.imageContainer {
+  position: relative;
+  background: url("../assets/image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+header.header {
+  position: relative;
+  height: 90px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10px 1fr 10px;
+  grid-template-columns: 10px 1fr 10px;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+      grid-template-areas: ". logo .";
+  background: #fff; }
+  header.header::after {
+    content: "";
+    position: absolute; }
+
+.logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  justify-self: start;
+  align-self: ceter;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .logo img {
+    width: 100px;
+    height: 60px;
+    margin-right: 20px; }
+  .logo p {
+    font-weight: 900;
+    font-size: 22px;
+    color: #138FD6; }
+
+.contactDetails {
+  grid-area: contactDetails;
+  justify-self: end;
+  align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  display: none; }
+  .contactDetails a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #138FD6;
+    text-decoration: underline; }
+    .contactDetails a:hover {
+      text-decoration: none; }
+  .contactDetails p {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+    color: #F76F26; }
+
+section.section1 {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: visible; }
+  section.section1 h3.sectionTitle, section.section1 p.sectionPara {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    color: #fff; }
+  section.section1 h3.sectionTitle {
+    top: 60px;
+    font-size: 22px;
+    font-weight: bold; }
+  section.section1 p.sectionPara {
+    top: 90px; }
+
+#comparison_form {
+  position: relative;
+  top: 150px;
+  height: auto;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  padding: 20px 50px 50px 50px;
+  margin-bottom: 50px; }
+  #comparison_form p {
+    margin-top: 35px;
+    margin-bottom: 18px; }
+  #comparison_form label {
+    width: 150px;
+    position: relative;
+    border: 1px solid #4444;
+    padding: 8px 15px;
+    -webkit-box-shadow: 0px 0x 3px rgba(0, 0, 0, 0.9);
+            box-shadow: 0px 0x 3px rgba(0, 0, 0, 0.9);
+    width: 150px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-right: 7px; }
+  #comparison_form .input_form_select, #comparison_form .input_form_date, #comparison_form .input_form_address, #comparison_form .input_form_email {
+    border: none;
+    padding: 8px 15px;
+    height: 35px; }
+  #comparison_form input.form_input {
+    display: none; }
+  #comparison_form input[type="radio"]:checked + label {
+    background-color: #F76F26;
+    color: #fff;
+    -webkit-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in; }
+    #comparison_form input[type="radio"]:checked + label::after, #comparison_form input[type="radio"]:checked + label::before {
+      background-color: #F76F26;
+      -webkit-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out; }
+  #comparison_form input[type="checkbox"] {
+    background: red; }
+
+.inputWrapper {
+  display: inline-block;
+  position: relative;
+  margin-top: -8px;
+  border: 1px solid #4444; }
+
+strong {
+  color: #F76F26; }
+
+section.details {
+  margin-top: 350px; }
+
+.energyDetails {
+  margin-top: 190px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px; }
+  .energyDetails .subEnergyDetails, .energyDetails .EandGasDetails {
+    background: #fff;
+    padding: 20px 50px 50px 50px;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+    margin-top: 30px; }
+    .energyDetails .subEnergyDetails h3, .energyDetails .EandGasDetails h3 {
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 22px;
+      margin-bottom: 20px; }
+    .energyDetails .subEnergyDetails p.upload, .energyDetails .subEnergyDetails p.whyUpload, .energyDetails .EandGasDetails p.upload, .energyDetails .EandGasDetails p.whyUpload {
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.9);
+      font-size: 17px;
+      margin-bottom: 30px; }
+    .energyDetails .subEnergyDetails p.whyUpload, .energyDetails .EandGasDetails p.whyUpload {
+      margin-bottom: 10px; }
+    .energyDetails .subEnergyDetails ul li, .energyDetails .EandGasDetails ul li {
+      list-style-type: square;
+      margin-left: 50px;
+      font-size: 15px;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    .energyDetails .subEnergyDetails .checkboxFile, .energyDetails .EandGasDetails .checkboxFile {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      line-height: 1.3;
+      text-align: justify; }
+    .energyDetails .subEnergyDetails #file, .energyDetails .subEnergyDetails #files, .energyDetails .EandGasDetails #file, .energyDetails .EandGasDetails #files {
+      width: 100%; }
+    .energyDetails .subEnergyDetails button, .energyDetails .EandGasDetails button {
+      position: relative;
+      width: auto;
+      font-size: 15px;
+      font-weight: light;
+      text-align: left;
+      margin-top: 10px;
+      text-decoration: underline;
+      cursor: pointer;
+      border: none;
+      color: #138FD6;
+      background: #fff;
+      display: block;
+      outline: none;
+      -webkit-transition: all .2s ease-in;
+      -o-transition: all .2s ease-in;
+      transition: all .2s ease-in;
+      height: 20px;
+      height: 50px;
+      border: 1px solid #4444;
+      width: 100%;
+      border-radius: 5px;
+      background: #f4f6f8;
+      padding-left: 20px;
+      text-decoration: none; }
+      .energyDetails .subEnergyDetails button:hover, .energyDetails .EandGasDetails button:hover {
+        font-size: 15px;
+        -webkit-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+        color: rgba(16, 118, 201, 0.979); }
+      .energyDetails .subEnergyDetails button .toolTip, .energyDetails .EandGasDetails button .toolTip {
+        position: absolute;
+        z-index: 999;
+        height: 18px;
+        width: 18px;
+        background: rgba(16, 118, 201, 0.979);
+        color: #fff;
+        font-weight: bolder;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.4;
+        margin-left: 10px; }
+        .energyDetails .subEnergyDetails button .toolTip::after, .energyDetails .EandGasDetails button .toolTip::after {
+          width: 0px; }
+        .energyDetails .subEnergyDetails button .toolTip:hover::after, .energyDetails .EandGasDetails button .toolTip:hover::after {
+          position: absolute;
+          content: attr(data);
+          height: auto;
+          width: 250px;
+          border: 2px solid rgba(16, 118, 201, 0.979);
+          font-size: 14px;
+          left: 130%;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          border-radius: 14px;
+          padding: 10px;
+          text-align: left;
+          color: #000;
+          -webkit-animation: toolTipWidth .3s ease-in-out forwards;
+                  animation: toolTipWidth .3s ease-in-out forwards;
+          opacity: 0;
+          background: #ffff; }
+        .energyDetails .subEnergyDetails button .toolTip:hover::before, .energyDetails .EandGasDetails button .toolTip:hover::before {
+          content: "";
+          top: 30%;
+          left: 95%;
+          position: absolute;
+          height: 0;
+          width: 0;
+          border-top: 4px solid transparent;
+          border-right: 8px solid rgba(16, 118, 201, 0.979);
+          border-bottom: 4px solid transparent;
+          text-align: left;
+          background: #ffff; }
+    .energyDetails .subEnergyDetails .detailsButtonFirst, .energyDetails .EandGasDetails .detailsButtonFirst {
+      margin-top: 80px; }
+
+.energyDetails .EandGasDetails {
+  margin-top: 30px;
+  display: none; }
+
+.inputFileLabel {
+  position: relative;
+  width: 35%;
+  height: 200px;
+  display: block;
+  height: 60px; }
+  .inputFileLabel:hover {
+    cursor: pointer; }
+  .inputFileLabel:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: '';
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 50px;
+    line-height: 3.6;
+    background: url("../assets/uploadimage.png") center center no-repeat; }
+  .inputFileLabel:before {
+    position: absolute;
+    content: "Upload your bill here";
+    top: 100%;
+    height: auto;
+    padding: 10px;
+    width: 100%;
+    background: #fff;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    border: 3px solid #138FD6; }
+  .inputFileLabel:hover::before {
+    color: #fff;
+    background: #138FD6;
+    -webkit-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    transition: all .5s ease-in; }
+  .inputFileLabel:hover::after {
+    -webkit-animation: beforeAnim 1s ease-in-out infinite;
+            animation: beforeAnim 1s ease-in-out infinite; }
+
+#inputFile, #inputFiles {
+  width: 0%;
+  margin-bottom: 10px;
+  display: block;
+  /* background: red; */
+  height: 100%; }
+
+form#EandGasForm, form.billInfoForm {
+  margin-top: 30px;
+  position: relative;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  background: #fff; }
+  form#EandGasForm p, form.billInfoForm p {
+    margin-top: 35px;
+    margin-bottom: 18px; }
+  form#EandGasForm .input_form_select, form#EandGasForm .input_form_date, form#EandGasForm .input_form_address, form#EandGasForm .input_form_email, form.billInfoForm .input_form_select, form.billInfoForm .input_form_date, form.billInfoForm .input_form_address, form.billInfoForm .input_form_email {
+    border: none;
+    padding: 8px 15px;
+    height: 35px;
+    background: #ffff; }
+
+input.date {
+  padding-right: 0px !important;
+  border: 1px solid #4444 !important;
+  width: 170px !important; }
+
+input.firstDateInput {
+  margin-right: 5px; }
+
+input.secondDateInput {
+  margin-left: 5px; }
+
+.dateWrapper {
+  border: none !important;
+  width: 100% !important; }
+
+.ElecQuesLabel input[type='radio'] {
+  width: 15px;
+  border: 0px;
+  height: 15px; }
+
+.elecChargedQues ul {
+  list-style-type: none;
+  width: 100%;
+  height: auto; }
+  .elecChargedQues ul li {
+    display: -ms-grid;
+    display: grid;
+    margin-bottom: 20px;
+    -ms-grid-columns: auto 1fr;
+    grid-template-columns: auto 1fr;
+    grid-auto-rows: 30px 1fr auto;
+        grid-template-areas: "radio h3" ". p" ". elecOptional"; }
+    .elecChargedQues ul li label {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+      grid-area: radio; }
+      .elecChargedQues ul li label input[type="radio"] {
+        border: 0px;
+        height: 15px;
+        width: 15px; }
+    .elecChargedQues ul li h3 {
+      -ms-grid-row: 1;
+      -ms-grid-column: 2;
+      grid-area: h3;
+      margin-left: 10px;
+      font-size: 16px; }
+    .elecChargedQues ul li p {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+      grid-area: p;
+      margin-left: 10px;
+      -ms-grid-row-align: start;
+          align-self: start;
+      margin-top: 0px;
+      font-size: 15px; }
+    .elecChargedQues ul li div {
+      -ms-grid-row: 3;
+      -ms-grid-column: 2;
+      grid-area: elecOptional;
+      margin-left: 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      height: auto; }
+      .elecChargedQues ul li div h3 {
+        margin-left: 0px !important;
+        margin-bottom: 10px; }
+      .elecChargedQues ul li div .elecChargedInputs {
+        width: 100%;
+        margin-left: 0px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        height: auto;
+        -webkit-box-pack: space;
+            -ms-flex-pack: space;
+                justify-content: space; }
+
+.elecChargedInputs input {
+  border: 1px solid #4444 !important;
+  width: 200px !important;
+  margin: 0px 10px 10px 0px; }
+
+#comparison_form, .energyDetails .subEnergyDetails, .energyDetails .EandGasDetails, .billInfoForm, .additionalForm {
+  padding: 10px 10px 50px 10px; }
+
+#comparison_form, .energyDetails, .billInfoForm, .additionalForm {
+  width: 390px; }
+
+.dateWrapper {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important; }
+
+@-webkit-keyframes toolTipWidth {
+  0% {
+    opacity: 0; }
+  50% { }
+  80% { }
+  100% {
+    opacity: 1; } }
+
+@keyframes toolTipWidth {
+  0% {
+    opacity: 0; }
+  50% { }
+  80% { }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes beforeAnim {
+  0% {
+    top: 0px; }
+  25% {
+    top: -5px; }
+  50% {
+    top: -3px; }
+  100% {
+    top: 0px; } }
+
+@keyframes beforeAnim {
+  0% {
+    top: 0px; }
+  25% {
+    top: -5px; }
+  50% {
+    top: -3px; }
+  100% {
+    top: 0px; } }
+
+@media only screen and (min-width: 320px) {
+  header.header {
+    position: relative;
+    height: 90px;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 60px 1fr 60px;
+    grid-template-columns: 60px 1fr 60px;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+        grid-template-areas: ". logo .";
+    background: #fff; }
+    header.header::after {
+      content: "";
+      position: absolute; }
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: logo;
+    justify-self: start;
+    align-self: ceter;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .logo img {
+      width: 100px;
+      height: 60px;
+      margin-right: 20px; }
+    .logo p {
+      font-weight: 900;
+      font-size: 22px;
+      color: #138FD6; }
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2; } }
+
+@media only screen and (min-width: 480px) {
+  header.header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 60px 1fr 60px;
+    grid-template-columns: 60px 1fr 60px;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+        grid-template-areas: ". logo ."; }
+  #comparison_form, .energyDetails, .billInfoForm, .additionalForm {
+    width: 450px; }
+  #comparison_form, .energyDetails .subEnergyDetails, .energyDetails .EandGasDetails, .billInfoForm, .additionalForm {
+    padding: 20px 20px 50px 20px; }
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2; }
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2; } }
+
+@media only screen and (min-width: 768px) {
+  header.header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100px 1fr 1fr 100px;
+    grid-template-columns: 100px 1fr 1fr 100px;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+        grid-template-areas: ". logo contactDetails ."; }
+  .contactDetails {
+    grid-area: contactDetails;
+    justify-self: end;
+    align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 14px; }
+    .contactDetails a {
+      text-decoration: none;
+      font-weight: 400;
+      color: #138FD6;
+      text-decoration: underline; }
+      .contactDetails a:hover {
+        text-decoration: none; }
+    .contactDetails p {
+      color: rgba(0, 0, 0, 0.8);
+      font-weight: 500;
+      color: #F76F26; }
+  section.section1 h3.sectionTitle, section.section1 p.sectionPara {
+    position: absolute;
+    width: 600px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    color: #fff; }
+  #comparison_form {
+    width: 600px; }
+  .energyDetails {
+    width: 600px; }
+  form#EandGasForm, form.billInfoForm {
+    width: 600px; }
+  #comparison_form, .energyDetails .subEnergyDetails, .energyDetails .EandGasDetails, .billInfoForm, .additionalForm {
+    padding: 20px 50px 50px 50px; }
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2; }
+  .contactDetails {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; }
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2; } }
+
+@media only screen and (min-width: 992px) {
+  header.header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100px 1fr 1fr 100px;
+    grid-template-columns: 100px 1fr 1fr 100px;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+        grid-template-areas: ". logo contactDetails ."; }
+  .contactDetails {
+    grid-area: contactDetails;
+    justify-self: end;
+    align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 14px; }
+  section.section1 h3.sectionTitle, section.section1 p.sectionPara {
+    position: absolute;
+    width: 600px;
+    left: 15%;
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+    color: #fff; }
+  #comparison_form, .energyDetails {
+    width: 600px;
+    margin-left: 15%; }
+  .energyDetails {
+    width: 600px; }
+  .detailsButtonFirst {
+    margin-top: 60px !important; }
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2; }
+  .contactDetails {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; }
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2; }
+  .contactDetails {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; } }
+
+@media only screen and (min-width: 1200px) {
+  header.header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 550px 550px 1fr;
+    grid-template-columns: 1fr 550px 550px 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+        grid-template-areas: ". logo contactDetails ."; }
+  .contactDetails {
+    grid-area: contactDetails;
+    justify-self: end;
+    align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 14px; }
+  #comparison_form {
+    width: 600px; }
+  .energyDetails {
+    width: 600px; }
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2; }
+  .contactDetails {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; }
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2; }
+  .contactDetails {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; }
+  .contactDetails {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; } }
+
+@media only screen and (min-width: 320px){
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2; } }
+
+@media only screen and (min-width: 768px){
+  .contactDetails {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; }
+  .contactDetails {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; }
+  .contactDetails {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; } }
+
+@media only screen and (min-width: 992px){
+  .contactDetails {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; }
+  .contactDetails {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; } }
+
+@media only screen and (min-width: 1200px){
+  .contactDetails {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; } }
