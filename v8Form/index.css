@@ -19,7 +19,7 @@ body {
 
 .imageContainer {
   position: relative;
-  background: url("assets/image.png");
+  background: url("https://github.com/Orzoon/Orzoon.github.io/blob/master/v8Form/assets/image.png");
   background-repeat: no-repeat;
   background-size: cover;
   -o-object-fit: cover;
