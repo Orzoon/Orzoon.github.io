@@ -1,5 +1,5 @@
 console.log("start")
-window.location.replace("www.kunarjun.com")
+window.location.replace("http://kunarjun.com/")
 // variables
 window.addEventListener("load", () => {
     let preloader = document.querySelector('.loader');
