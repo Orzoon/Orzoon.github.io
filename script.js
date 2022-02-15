@@ -1,5 +1,5 @@
 console.log("start")
-window.location.replace("http://kunarjun.com/")
+window.location.replace("https://orzoon-portfolio.herokuapp.com/")
 // variables
 window.addEventListener("load", () => {
     let preloader = document.querySelector('.loader');
