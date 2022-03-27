@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         let timeline = new gsap.timeline({paused: false});
         timeline.timeScale(1.2)
        //console.log(t1.totalDuration())
-            timeline.to(overlay[count],{height: "2000px", width: "2000px", duration: 0.5, ease: "ease-in"}, 0)
+            timeline.to(overlay[count],{height: "3000px", width: "3000px", duration: 0.5, ease: "ease-in"}, 0)
             .call(cubeFunctionFirst, [cubeTopColor[count], cubeSideColor[count]], "<0.1")
             .call(cubeFunctionSecond, null, "<")
             .to(".secondCube",
