@@ -1,5 +1,5 @@
 console.log("start")
-window.location.replace("https://orzoon-portfolio.herokuapp.com/")
+window.location.replace("https://foliodeploy--fanciful-boba-5a8ce3.netlify.app/")
 // variables
 window.addEventListener("load", () => {
     let preloader = document.querySelector('.loader');
