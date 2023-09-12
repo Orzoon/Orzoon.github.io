@@ -1,4 +1,4 @@
-console.log("start")
+
 //window.location.replace("https://foliodeploy--fanciful-boba-5a8ce3.netlify.app/")
 window.location.replace("https://650029eb61818b4a069fdb6d--quiet-mochi-223a33.netlify.app/")
 // variables
