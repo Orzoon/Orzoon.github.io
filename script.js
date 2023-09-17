@@ -1,6 +1,6 @@
 
 //window.location.replace("https://foliodeploy--fanciful-boba-5a8ce3.netlify.app/")
-window.location.replace("https://quiet-mochi-223a33.netlify.app/")
+window.location.replace("https://kunwardevportfolio.netlify.app/")
 // variables
 window.addEventListener("load", () => {
     let preloader = document.querySelector('.loader');
