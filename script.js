@@ -1,6 +1,7 @@
 
 //window.location.replace("https://foliodeploy--fanciful-boba-5a8ce3.netlify.app/")
-window.location.replace("https://kunwardevportfolio.netlify.app/")
+window.location.replace("https://kunwardevportfolio.netlify.app/");
+// commit to rebuild
 // variables
 window.addEventListener("load", () => {
     let preloader = document.querySelector('.loader');
